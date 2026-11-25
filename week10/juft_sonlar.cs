@@ -1,0 +1,27 @@
+namespace Juft_sonlar
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Massiv nechta sondan iborat bo`lsin?");
+            int n = Convert.ToInt32(Console.ReadLine());
+
+            int[] sonlar = new int[n];
+            for (int i = 0; i < n; i++)
+            {
+                Console.Write($"{i + 1}-sonni kiriting: ");
+                sonlar[i] = Convert.ToInt32(Console.ReadLine());
+            }
+            Console.WriteLine("/Massivdagi juft sonlar:");
+            for (int i = 0; i < n; i++)
+            {
+                if (sonlar[i] % 2 == 0)
+                {
+                    Console.WriteLine(sonlar[i] + " ");
+                }
+            }
+
+        }
+    }
+}
